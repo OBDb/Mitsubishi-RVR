@@ -1,4 +1,356 @@
 { "commands": [
-
+{ "hdr": "600", "rax": "500", "fcm1": true, "dbg": true, "cmd": {"21": "23"}, "freq": 15,
+  "signals": [
+    {"id": "RVR_TP_FL", "path": "Tires", "fmt": {"bix": 64, "len": 8, "max": 51,              "div": 5,             "unit": "psi"     }, "name": "Pressure front left",    "suggestedMetric": "frontLeftTirePressure"},
+    {"id": "RVR_TT_FL", "path": "Tires", "fmt": {"bix": 72, "len": 8, "max": 205, "min": -50,           "add": -50, "unit": "celsius" }, "name": "Temperature front left", "suggestedMetric": "frontLeftTireTemperature"}
+  ]},
+{ "hdr": "600", "rax": "500", "fcm1": true, "dbg": true, "cmd": {"21": "24"}, "freq": 15,
+  "signals": [
+    {"id": "RVR_TP_RL", "path": "Tires", "fmt": {"bix": 64, "len": 8, "max": 51,              "div": 5,             "unit": "psi"     }, "name": "Pressure rear left",    "suggestedMetric": "rearLeftTirePressure"},
+    {"id": "RVR_TT_RL", "path": "Tires", "fmt": {"bix": 72, "len": 8, "max": 205, "min": -50,           "add": -50, "unit": "celsius" }, "name": "Temperature rear left", "suggestedMetric": "rearLeftTireTemperature"}
+  ]},
+{ "hdr": "600", "rax": "500", "fcm1": true, "dbg": true, "cmd": {"21": "25"}, "freq": 15,
+  "signals": [
+    {"id": "RVR_TP_RR", "path": "Tires", "fmt": {"bix": 64, "len": 8, "max": 51,              "div": 5,             "unit": "psi"     }, "name": "Pressure rear right",    "suggestedMetric": "rearRightTirePressure"},
+    {"id": "RVR_TT_RR", "path": "Tires", "fmt": {"bix": 72, "len": 8, "max": 205, "min": -50,           "add": -50, "unit": "celsius" }, "name": "Temperature rear right", "suggestedMetric": "rearRightTireTemperature"}
+  ]},
+{ "hdr": "600", "rax": "500", "fcm1": true, "dbg": true, "cmd": {"21": "26"}, "freq": 15,
+  "signals": [
+    {"id": "RVR_TP_FR", "path": "Tires", "fmt": {"bix": 64, "len": 8, "max": 51,              "div": 5,             "unit": "psi"     }, "name": "Pressure front right",    "suggestedMetric": "frontRightTirePressure"},
+    {"id": "RVR_TT_FR", "path": "Tires", "fmt": {"bix": 72, "len": 8, "max": 205, "min": -50,           "add": -50, "unit": "celsius" }, "name": "Temperature front right", "suggestedMetric": "frontRightTireTemperature"}
+  ]},
+{ "hdr": "600", "rax": "500", "fcm1": true, "dbg": true, "cmd": {"21": "27"}, "freq": 15,
+  "signals": [
+    {"id": "RVR_TP_SPARE", "path": "Tires", "fmt": {"bix": 64, "len": 8, "max": 51,              "div": 5,             "nullmin": 0,   "unit": "psi"     }, "name": "Pressure spare tire"},
+    {"id": "RVR_TT_SPARE", "path": "Tires", "fmt": {"bix": 72, "len": 8, "max": 205, "min": -50,           "add": -50, "nullmin": -50, "unit": "celsius" }, "name": "Temperature spare tire"}
+  ]},
+{ "hdr": "688", "rax": "511", "fcm1": true, "dbg": true, "cmd": {"21": "10"}, "freq": 1,
+  "signals": [
+    {"id": "RVR_AC_INTERIOR_T",     "path": "Climate", "fmt": {           "len": 8, "max": 47.75, "min": -16,             "div": 4,   "add": -16, "unit": "celsius" }, "name": "Interior temperature"},
+    {"id": "RVR_AC_AIR_THERMO_SNS", "path": "Climate", "fmt": {"bix": 8,  "len": 8, "max": 47.75, "min": -16,             "div": 4,   "add": -16, "unit": "celsius" }, "name": "Air temperature sensor"},
+    {"id": "RVR_AC_PRES",           "path": "Climate", "fmt": {"bix": 16, "len": 8, "max": 3.3,               "mul": 3.3, "div": 255,             "unit": "unknown" }, "name": "Pressure"},
+    {"id": "RVR_AC_SOLAR_SNS",      "path": "Climate", "fmt": {"bix": 24, "len": 8, "max": 5.5,               "mul": 5.5, "div": 255,             "unit": "scalar"  }, "name": "Solar sensor"},
+    {"id": "RVR_AC_ECT",            "path": "Climate", "fmt": {"bix": 32, "len": 8, "max": 215,   "min": -40,                         "add": -40, "unit": "celsius" }, "name": "Engine coolant temperature", "suggestedMetric": "engineCoolantTemperature"}
+  ]},
+{ "hdr": "688", "rax": "511", "fcm1": true, "dbg": true, "cmd": {"21": "11"}, "freq": 5,
+  "signals": [
+    {"id": "RVR_AC_AAT", "path": "Climate", "fmt": { "len": 8, "max": 87.5, "min": -40, "div": 2, "add": -40, "unit": "celsius" }, "name": "Ambient air temperature"}
+  ]},
+{ "hdr": "688", "rax": "511", "fcm1": true, "dbg": true, "cmd": {"21": "13"}, "freq": 0.25,
+  "signals": [
+    {"id": "RVR_AC_RPM", "path": "Climate", "fmt": {"bix": 8,  "len": 16, "max": 7000, "unit": "rpm"               }, "name": "Engine RPM",    "suggestedMetric": "engineSpeed"},
+    {"id": "RVR_AC_VSS", "path": "Climate", "fmt": {"bix": 24, "len": 16, "max": 250,  "unit": "kilometersPerHour" }, "name": "Vehicle speed", "suggestedMetric": "speed"}
+  ]},
+{ "hdr": "688", "rax": "511", "fcm1": true, "dbg": true, "cmd": {"21": "22"}, "freq": 5,
+  "signals": [
+    {"id": "RVR_AC_OUTPUT_VSS_DR", "path": "Climate", "fmt": {           "len": 8, "max": 16, "div": 2, "unit": "scalar" }, "name": "Driver side output speed"},
+    {"id": "RVR_AC_OUTPUT_VSS_AS", "path": "Climate", "fmt": {"bix": 8,  "len": 8, "max": 16, "div": 2, "unit": "scalar" }, "name": "Passenger side output speed"},
+    {"id": "RVR_AC_OUTPUT_MODE",   "path": "Climate", "fmt": {"bix": 16, "len": 8, "max": 16,           "unit": "scalar" }, "name": "Output mode"}
+  ]},
+{ "hdr": "688", "rax": "511", "fcm1": true, "dbg": true, "cmd": {"21": "23"}, "freq": 1,
+  "signals": [
+    {"id": "RVR_AC_SWITCH",                       "path": "Climate", "fmt": {"bix": 6, "len": 1, "max": 1,   "unit": "offon" }, "name": "Air conditioning switch"},
+    {"id": "RVR_AC_A_C_COMPRESSOR_DRIVE_REQUEST", "path": "Climate", "fmt": {"bix": 7, "len": 1, "max": 1,   "unit": "offon" }, "name": "A/C compressor drive request"},
+    {"id": "RVR_AC_IDLE_UP_REQUEST",              "path": "Climate", "fmt": {"bix": 8, "len": 8, "max": 255, "unit": "rpm"   }, "name": "Idle up request"}
+  ]},
+{ "hdr": "688", "rax": "511", "fcm1": true, "dbg": true, "cmd": {"21": "32"}, "freq": 3600,
+  "signals": [
+    {"id": "RVR_AC_LEAK_INDICATOR_20", "path": "Climate", "fmt": {"bix": 5, "len": 1, "max": 1, "unit": "offon" }, "name": "Leak indicator at 20%"},
+    {"id": "RVR_AC_LEAK_INDICATOR",    "path": "Climate", "fmt": {"bix": 7, "len": 1, "max": 1, "unit": "offon" }, "name": "Leak indicator"}
+  ]},
+{ "hdr": "688", "rax": "511", "fcm1": true, "dbg": true, "cmd": {"21": "70"}, "freq": 1,
+  "signals": [
+    {"id": "RVR_AC_A_C_COMPRESSOR_DRIVE_FLAG", "path": "Climate", "fmt": {"bix": 7, "len": 1, "max": 1, "unit": "offon" }, "name": "A/C compressor drive flag"}
+  ]},
+{ "hdr": "688", "rax": "511", "fcm1": true, "dbg": true, "cmd": {"21": "80"}, "freq": 3600,
+  "signals": [
+    {"id": "RVR_AC_SYSTEM_WORK_TIME",           "path": "Climate", "fmt": {           "len": 24, "max": 83886075, "mul": 5, "unit": "scalar" }, "name": "System work time"},
+    {"id": "RVR_AC_COMPRESSOR_ON_OFF_COUNT",    "path": "Climate", "fmt": {"bix": 24, "len": 24, "max": 16777215,           "unit": "scalar" }, "name": "Compressor ON/OFF count"},
+    {"id": "RVR_AC_REAR_DEFOGGER_ON_OFF_COUNT", "path": "Climate", "fmt": {"bix": 48, "len": 16, "max": 65535,              "unit": "scalar" }, "name": "Rear defogger ON/OFF count"}
+  ]},
+{ "hdr": "688", "rax": "511", "fcm1": true, "dbg": true, "cmd": {"21": "81"}, "freq": 3600,
+  "signals": [
+    {"id": "RVR_AC_MAX_PRES",              "path": "Climate", "fmt": {"bix": 96,  "len": 8,  "max": 3.3,      "mul": 3.3, "div": 255, "unit": "unknown" }, "name": "Max pressure"},
+    {"id": "RVR_AC_CONDITIONER_WORK_TIME", "path": "Climate", "fmt": {"bix": 104, "len": 24, "max": 83886075, "mul": 5,               "unit": "scalar"  }, "name": "Conditioner work time"},
+    {"id": "RVR_AC_COMPRESSOR_WORK_TIME",  "path": "Climate", "fmt": {"bix": 128, "len": 24, "max": 83886075, "mul": 5,               "unit": "scalar"  }, "name": "Compressor work time"},
+    {"id": "RVR_AC_RECIRCULATION_TIME",    "path": "Climate", "fmt": {"bix": 176, "len": 16, "max": 327675,   "mul": 5,               "unit": "minutes" }, "name": "Recirculation time"}
+  ]},
+{ "hdr": "688", "rax": "511", "fcm1": true, "dbg": true, "cmd": {"21": "83"}, "freq": 3600,
+  "signals": [
+    {"id": "RVR_AC_FAN_M1_WORK_TIME", "path": "Climate", "fmt": {"bix": 40, "len": 24, "max": 83886075, "mul": 5, "unit": "scalar" }, "name": "Fan M1 work time"},
+    {"id": "RVR_AC_FAN_M2_WORK_TIME", "path": "Climate", "fmt": {"bix": 64, "len": 24, "max": 83886075, "mul": 5, "unit": "scalar" }, "name": "Fan M2 work time"}
+  ]},
+{ "hdr": "6A0", "rax": "514", "fcm1": true, "dbg": true, "cmd": {"21": "A3"}, "freq": 30,
+  "signals": [
+    {"id": "RVR_FLI", "path": "Fuel", "fmt": {"bix": 16, "len": 8, "max": 100, "add": -16, "unit": "percent" }, "name": "Fuel level", "suggestedMetric": "fuelTankLevel"}
+  ]},
+{ "hdr": "6A0", "rax": "514", "fcm1": true, "dbg": true, "cmd": {"21": "AD"}, "freq": 30,
+  "signals": [
+    {"id": "RVR_ODO", "path": "Trips", "fmt": { "len": 24, "blsb": true, "max": 16777215, "unit": "kilometers" }, "name": "Odometer", "suggestedMetric": "odometer"}
+  ]},
+{ "hdr": "6A0", "rax": "514", "fcm1": true, "dbg": true, "cmd": {"21": "AF"}, "freq": 5,
+  "signals": [
+    {"id": "RVR_DASHBOARD_V", "path": "Electrical", "fmt": { "len": 8, "max": 25.5, "div": 10, "unit": "volts" }, "name": "Dashboard voltage"}
+  ]},
+{ "hdr": "6A0", "rax": "514", "fcm1": true, "dbg": true, "cmd": {"21": "BC"}, "freq": 30,
+  "signals": [
+    {"id": "RVR_MILEAGE_BEFORE_SERVICING",       "path": "Trips", "fmt": {           "len": 8, "max": 25500, "mul": 100, "unit": "kilometers" }, "name": "Mileage before servicing"},
+    {"id": "RVR_PERIOD_BEFORE_SERVICING_MONTHS", "path": "Trips", "fmt": {"bix": 32, "len": 8, "max": 255,               "unit": "scalar"     }, "name": "Months before servicing"}
+  ]},
+{ "hdr": "784", "rax": "785", "fcm1": true, "dbg": true, "cmd": {"21": "01"}, "freq": 0.25,
+  "signals": [
+    {"id": "RVR_ABS_FL_VSS", "path": "Movement", "fmt": {           "len": 16, "max": 655.35, "div": 100, "unit": "kilometersPerHour" }, "name": "Front left wheel speed sensor"},
+    {"id": "RVR_ABS_FR_VSS", "path": "Movement", "fmt": {"bix": 16, "len": 16, "max": 655.35, "div": 100, "unit": "kilometersPerHour" }, "name": "Front right wheel speed sensor"},
+    {"id": "RVR_ABS_RL_VSS", "path": "Movement", "fmt": {"bix": 32, "len": 16, "max": 655.35, "div": 100, "unit": "kilometersPerHour" }, "name": "Rear left wheel speed sensor"},
+    {"id": "RVR_ABS_RR_VSS", "path": "Movement", "fmt": {"bix": 48, "len": 16, "max": 655.35, "div": 100, "unit": "kilometersPerHour" }, "name": "Rear right wheel speed sensor"}
+  ]},
+{ "hdr": "784", "rax": "785", "fcm1": true, "dbg": true, "cmd": {"21": "54"}, "freq": 30,
+  "signals": [
+    {"id": "RVR_ODO_784", "path": "Trips", "fmt": {"bix": 24, "len": 16, "max": 1677696, "mul": 128, "div": 5, "unit": "kilometers" }, "name": "Odometer"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "01"}, "freq": 0.25,
+  "signals": [
+    {"id": "RVR_MPI_BATTERY_V",       "path": "Engine", "fmt": {           "len": 8,  "max": 18,   "mul": 18,   "div": 255, "unit": "volts"             }, "name": "Battery voltage",    "suggestedMetric": "starterBatteryVoltage"},
+    {"id": "RVR_MPI_VSS",             "path": "Engine", "fmt": {"bix": 8,  "len": 8,  "max": 200,  "mul": 2,                "unit": "kilometersPerHour" }, "name": "Vehicle speed",      "suggestedMetric": "speed"},
+    {"id": "RVR_MPI_CRANK_ANGLE_SNS", "path": "Engine", "fmt": {"bix": 16, "len": 16, "max": 8000,              "div": 8,   "unit": "rpm"               }, "name": "Crank angle sensor"},
+    {"id": "RVR_MPI_TGT_IDLE_RPM",    "path": "Engine", "fmt": {"bix": 32, "len": 8,  "max": 2000, "mul": 2000, "div": 255, "unit": "rpm"               }, "name": "Target idle RPM"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "02"}, "freq": 1,
+  "signals": [
+    {"id": "RVR_MPI_IAT", "path": "Engine", "fmt": {           "len": 8, "max": 120,   "min": -40,                 "add": -40, "unit": "celsius" }, "name": "Intake air temperature"},
+    {"id": "RVR_MPI_ECT", "path": "Engine", "fmt": {"bix": 8,  "len": 8, "max": 215,   "min": -40,                 "add": -40, "unit": "celsius" }, "name": "Engine coolant temperature", "suggestedMetric": "engineCoolantTemperature"},
+    {"id": "RVR_BP",      "path": "Engine", "fmt": {"bix": 16, "len": 8, "max": 49.17,             "mul": 0.19285,             "unit": "psi"     }, "name": "Boost pressure"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "03"}, "freq": 1,
+  "signals": [
+    {"id": "RVR_MPI_MANIFOLD_PRES",  "path": "Engine", "fmt": {           "len": 16, "max": 126,             "div": 512, "unit": "kilopascal" }, "name": "Manifold pressure"},
+    {"id": "RVR_MPI_AIR_FLOW_SNS_V", "path": "Engine", "fmt": {"bix": 16, "len": 8,  "max": 5,   "mul": 5,   "div": 255, "unit": "volts"      }, "name": "Air flow sensor voltage"},
+    {"id": "RVR_MPI_ENGINE_LOAD",    "path": "Engine", "fmt": {"bix": 32, "len": 8,  "max": 100, "mul": 100, "div": 255, "unit": "percent"    }, "name": "Engine load",             "suggestedMetric": "engineLoad"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "04"}, "freq": 0.25,
+  "signals": [
+    {"id": "RVR_MPI_THROTTLE_POSITION_MAIN",     "path": "Engine", "fmt": {           "len": 8, "max": 5, "mul": 5, "div": 255, "unit": "volts" }, "name": "Main throttle position"},
+    {"id": "RVR_MPI_THROTTLE_POSITION_SUB",      "path": "Engine", "fmt": {"bix": 8,  "len": 8, "max": 5, "mul": 5, "div": 255, "unit": "volts" }, "name": "Sub throttle position"},
+    {"id": "RVR_MPI_TGT_THROTTLE_POSITION_MAIN", "path": "Engine", "fmt": {"bix": 16, "len": 8, "max": 5, "mul": 5, "div": 255, "unit": "volts" }, "name": "Target main throttle position"},
+    {"id": "RVR_MPI_ACCELERATOR_POSITION_MAIN",  "path": "Engine", "fmt": {"bix": 24, "len": 8, "max": 5, "mul": 5, "div": 255, "unit": "volts" }, "name": "Main accelerator position"},
+    {"id": "RVR_MPI_ACCELERATOR_POSITION_SUB",   "path": "Engine", "fmt": {"bix": 32, "len": 8, "max": 5, "mul": 5, "div": 255, "unit": "volts" }, "name": "Sub accelerator position"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "05"}, "freq": 1,
+  "signals": [
+    {"id": "RVR_MPI_IGN_ADVANCE",         "path": "Engine", "fmt": {          "len": 8, "max": 235,   "min": -20,           "add": -20, "unit": "scalar"       }, "name": "Ignition advance"},
+    {"id": "RVR_MPI_INJECTOR_DRIVE_TIME", "path": "Engine", "fmt": {"bix": 8, "len": 8, "max": 63.75,             "div": 4,             "unit": "milliseconds" }, "name": "Injector drive time"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "07"}, "freq": 1,
+  "signals": [
+    {"id": "RVR_MPI_SHORT_TERM_FUEL_CORRECTION", "path": "Fuel", "fmt": {"bix": 8,  "len": 8, "max": 49.8, "min": -50.19, "mul": 20, "div": 51, "add": -50.196078, "unit": "percent" }, "name": "Short term fuel correction", "suggestedMetric": "shortTermFuelTrim"},
+    {"id": "RVR_MPI_LONG_TERM_FUEL_CORRECTION",  "path": "Fuel", "fmt": {"bix": 16, "len": 8, "max": 49.8, "min": -50.19, "mul": 20, "div": 51, "add": -50.196078, "unit": "percent" }, "name": "Long term fuel correction"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "08"}, "freq": 1,
+  "signals": [
+    {"id": "RVR_MPI_DETONATION_RETARD",       "path": "Engine", "fmt": {"bix": 8,  "len": 8, "max": 90,  "mul": 90,  "div": 255, "unit": "scalar"  }, "name": "Detonation retard"},
+    {"id": "RVR_MPI_DETONATION_CTRL_LEARNED", "path": "Engine", "fmt": {"bix": 16, "len": 8, "max": 100, "mul": 100, "div": 255, "unit": "percent" }, "name": "Detonation control learned"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "09"}, "freq": 1,
+  "signals": [
+    {"id": "RVR_APS_CLOSED_LEARN", "path": "Engine", "fmt": { "len": 16, "max": 47.49, "min": -2.5, "mul": 0.0007629394, "add": -2.5, "unit": "volts" }, "name": "Accelerator pedal closed position learning, main"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "0A"}, "freq": 1,
+  "signals": [
+    {"id": "RVR_MPI_VVT_PHASE_ANGLE", "path": "Engine", "fmt": {"bix": 16, "len": 8, "max": 79.375, "min": -80, "div": 1.6, "add": -80, "unit": "degrees" }, "name": "Variable valve timing phase angle"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "0E"}, "freq": 1,
+  "signals": [
+    {"id": "RVR_MPI_COOLING_FAN_DUTY", "path": "Engine", "fmt": { "len": 8, "max": 100.011, "mul": 0.3922, "unit": "percent" }, "name": "Cooling fan duty"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "0F"}, "freq": 1,
+  "signals": [
+    {"id": "RVR_MPI_PURGE_VALVE_CTRL", "path": "Engine", "fmt": { "len": 8, "max": 100, "mul": 100, "div": 255, "unit": "percent" }, "name": "Purge valve control"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "10"}, "freq": 5,
+  "signals": [
+    {"id": "RVR_EXH_GAS_T",      "path": "Engine", "fmt": {           "len": 8, "max": 1075, "min": -200, "mul": 5,           "add": -200,                  "unit": "celsius"    }, "name": "Exhaust gas temperature"},
+    {"id": "RVR_CAT_T",          "path": "Engine", "fmt": {"bix": 8,  "len": 8, "max": 1075, "min": -200, "mul": 5,           "add": -200, "nullmin": -200, "unit": "celsius"    }, "name": "Catalyst temperature"},
+    {"id": "RVR_DPF_T",          "path": "Engine", "fmt": {"bix": 16, "len": 8, "max": 1075, "min": -200, "mul": 5,           "add": -200,                  "unit": "celsius"    }, "name": "Diesel particulate filter temperature"},
+    {"id": "RVR_DPF_DIFF_P_7E0", "path": "Engine", "fmt": {"bix": 24, "len": 8, "max": 117,  "min": -10,            "div": 2, "add": -10,                   "unit": "kilopascal" }, "name": "Diesel particulate filter differential pressure"},
+    {"id": "RVR_NTC_T",          "path": "Engine", "fmt": {"bix": 40, "len": 8, "max": 1075, "min": -200, "mul": 5,           "add": -200,                  "unit": "celsius"    }, "name": "Exhaust thermistor temperature"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "11"}, "freq": 30,
+  "signals": [
+    {"id": "RVR_DPF_SOOT_1",            "path": "Trips",  "fmt": {"bix": 8,  "len": 8, "max": 2550,  "mul": 10,            "unit": "kilometers" }, "name": "Diesel particulate filter soot accumulation for distance 1"},
+    {"id": "RVR_DPF_SOOT_SUM",          "path": "Engine", "fmt": {"bix": 16, "len": 8, "max": 12.75,            "div": 20, "unit": "scalar"     }, "name": "Diesel particulate filter soot load, summation method"},
+    {"id": "RVR_DPF_SOOT_P_METHOD_G_L", "path": "Engine", "fmt": {"bix": 24, "len": 8, "max": 12.75,            "div": 20, "unit": "scalar"     }, "name": "Diesel particulate filter soot pressure method, g/l"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "12"}, "freq": 0.25,
+  "signals": [
+    {"id": "RVR_MPI_TGT_THROTTLE_CTRL",   "path": "Engine", "fmt": {           "len": 16, "max": 5,               "div": 512, "unit": "volts"   }, "name": "Target throttle control"},
+    {"id": "RVR_MPI_THROTTLE_CTRL_SERVO", "path": "Engine", "fmt": {"bix": 16, "len": 8,  "max": 100, "mul": 100, "div": 255, "unit": "percent" }, "name": "Throttle control servo"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "15"}, "freq": 30,
+  "signals": [
+    {"id": "RVR_DPF_ODO",     "path": "Trips",  "fmt": {           "len": 24, "max": 16777215,                                      "unit": "kilometers" }, "name": "Diesel particulate filter odometer"},
+    {"id": "RVR_DPF_SOOT",    "path": "Engine", "fmt": {"bix": 24, "len": 8,  "max": 255,                                           "unit": "unknown"    }, "name": "Diesel particulate filter soot"},
+    {"id": "RVR_DPF_MAX_T_1", "path": "Engine", "fmt": {"bix": 32, "len": 8,  "max": 2150,     "min": -400, "mul": 10, "add": -400, "unit": "celsius"    }, "name": "Diesel particulate filter, maximum temperature 1"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "1A"}, "freq": 1,
+  "signals": [
+    {"id": "RVR_MPI_CALCULATED_LOAD", "path": "Engine", "fmt": {          "len": 8, "max": 100, "mul": 100, "div": 255, "unit": "percent" }, "name": "Calculated load", "suggestedMetric": "engineLoad"},
+    {"id": "RVR_MPI_ABSOLUTE_LOAD",   "path": "Engine", "fmt": {"bix": 8, "len": 8, "max": 100, "mul": 100, "div": 255, "unit": "percent" }, "name": "Absolute load",   "suggestedMetric": "absoluteEngineLoad"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "1D"}, "freq": 0.25,
+  "signals": [
+    {"id": "RVR_MPI_IDLE_STS",                "path": "Engine",  "fmt": {           "len": 1, "max": 1, "unit": "offon" }, "name": "Idle status"},
+    {"id": "RVR_MPI_CRANKING_SIG_ST",         "path": "Engine",  "fmt": {"bix": 1,  "len": 1, "max": 1, "unit": "offon" }, "name": "Cranking signal"},
+    {"id": "RVR_MPI_OFF_COND",                "path": "Engine",  "fmt": {"bix": 4,  "len": 1, "max": 1, "unit": "offon" }, "name": "Off condition"},
+    {"id": "RVR_MPI_NEUTRAL_STS",             "path": "Engine",  "fmt": {"bix": 6,  "len": 1, "max": 1, "unit": "offon" }, "name": "Neutral status"},
+    {"id": "RVR_MPI_IGN_SWITCH",              "path": "Engine",  "fmt": {"bix": 15, "len": 1, "max": 1, "unit": "offon" }, "name": "Ignition switch"},
+    {"id": "RVR_MPI_NORMAL_BRAKE_CLOSED_STS", "path": "Control", "fmt": {"bix": 30, "len": 1, "max": 1, "unit": "offon" }, "name": "Normal brake closed status"},
+    {"id": "RVR_MPI_BRAKE_SWITCH",            "path": "Control", "fmt": {"bix": 31, "len": 1, "max": 1, "unit": "offon" }, "name": "Brake switch"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "1E"}, "freq": 1,
+  "signals": [
+    {"id": "RVR_MPI_ENGINE_CTRL_RELAY",    "path": "Engine", "fmt": {"bix": 2, "len": 1, "max": 1, "unit": "offon" }, "name": "Engine control relay"},
+    {"id": "RVR_MPI_THROTTLE_CTRL_RELAY",  "path": "Engine", "fmt": {"bix": 5, "len": 1, "max": 1, "unit": "offon" }, "name": "Throttle control relay"},
+    {"id": "RVR_MPI_FUEL_PUMP_RELAY",      "path": "Fuel",   "fmt": {"bix": 6, "len": 1, "max": 1, "unit": "offon" }, "name": "Fuel pump relay"},
+    {"id": "RVR_MPI_A_C_COMPRESSOR_RELAY", "path": "Engine", "fmt": {"bix": 7, "len": 1, "max": 1, "unit": "offon" }, "name": "A/C compressor relay"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "42"}, "freq": 1,
+  "signals": [
+    {"id": "RVR_SMALL_INJ_LEARN", "path": "Engine", "fmt": {"bix": 32, "len": 8, "max": 256, "add": 1, "unit": "scalar" }, "name": "Small injection quantity learning"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "43"}, "freq": 1,
+  "signals": [
+    {"id": "RVR_O_E_P_C_O_O_P_1", "path": "Engine", "fmt": {           "len": 8, "max": 25.5, "div": 10, "unit": "unknown" }, "name": "Fuel injection volume control, cylinder 1"},
+    {"id": "RVR_O_E_P_C_O_O_P_2", "path": "Engine", "fmt": {"bix": 8,  "len": 8, "max": 25.5, "div": 10, "unit": "unknown" }, "name": "Fuel injection volume control, cylinder 2"},
+    {"id": "RVR_O_E_P_C_O_O_P_3", "path": "Engine", "fmt": {"bix": 16, "len": 8, "max": 25.5, "div": 10, "unit": "unknown" }, "name": "Fuel injection volume control, cylinder 3"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "46"}, "freq": 5,
+  "signals": [
+    {"id": "RVR_BAT_T", "path": "Battery", "fmt": {"bix": 16, "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Battery temperature"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "47"}, "freq": 1,
+  "signals": [
+    {"id": "RVR_EGR_VALVE_DUTY", "path": "Engine", "fmt": {"bix": 8, "len": 8, "max": 100, "div": 2.5497195309, "unit": "percent" }, "name": "Exhaust gas recirculation valve duty"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "49"}, "freq": 5,
+  "signals": [
+    {"id": "RVR_FUEL_T", "path": "Fuel", "fmt": {"bix": 32, "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Fuel temperature"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "4A"}, "freq": 1,
+  "signals": [
+    {"id": "RVR_CYCLE_CONS", "path": "Engine", "fmt": { "len": 8, "max": 127, "div": 2, "unit": "unknown" }, "name": "Cycle consumption"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "4B"}, "freq": 1,
+  "signals": [
+    {"id": "RVR_OE_PE_P_C", "path": "Engine", "fmt": {          "len": 8, "max": 127,  "min": -128,            "add": -128, "unit": "scalar"       }, "name": "Main injection timing"},
+    {"id": "RVR_EP_P_C_O",  "path": "Engine", "fmt": {"bix": 8, "len": 8, "max": 25.5,              "div": 10,              "unit": "milliseconds" }, "name": "Fuel injection interval"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "4C"}, "freq": 1,
+  "signals": [
+    {"id": "RVR_FUEL_RAIL_PRES", "path": "Fuel", "fmt": {"bix": 8, "len": 8, "max": 36985.2, "mul": 145.04, "unit": "psi" }, "name": "Fuel rail pressure"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "4E"}, "freq": 1,
+  "signals": [
+    {"id": "RVR_AC_COMPRESSOR", "path": "Engine", "fmt": {"bix": 24, "len": 1, "max": 1, "unit": "offon" }, "name": "A/C compressor"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "51"}, "freq": 1,
+  "signals": [
+    {"id": "RVR_INJECTION_QTY", "path": "Engine", "fmt": { "len": 8, "max": 127.5, "div": 2, "unit": "liters" }, "name": "Injection qty"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "A8"}, "freq": 1,
+  "signals": [
+    {"id": "RVR_COOLING_FAN_DUTY", "path": "Engine", "fmt": {"bix": 8, "len": 8, "max": 255, "unit": "percent" }, "name": "Cooling fan duty"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "C2"}, "freq": 1,
+  "signals": [
+    {"id": "RVR_FUEL_RAIL_PRES_7E0_C2", "path": "Fuel",   "fmt": {"bix": 24, "len": 8, "max": 29007,             "mul": 113.754872,                                  "unit": "psi"     }, "name": "Fuel rail pressure"},
+    {"id": "RVR_FUEL_RAIL_VALVE_DUTY",  "path": "Fuel",   "fmt": {"bix": 32, "len": 8, "max": 100,                                  "div": 2.5497195309,             "unit": "percent" }, "name": "Fuel rail valve duty"},
+    {"id": "RVR_INJECTION_QTY_7E0_C2",  "path": "Engine", "fmt": {"bix": 48, "len": 8, "max": 100,                                  "div": 2.5497195309,             "unit": "unknown" }, "name": "Injection qty"},
+    {"id": "RVR_FUEL_T_7E0_C2",         "path": "Fuel",   "fmt": {"bix": 88, "len": 8, "max": 215,   "min": -40,                                         "add": -40, "unit": "celsius" }, "name": "Fuel temperature"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "C3"}, "freq": 1,
+  "signals": [
+    {"id": "RVR_EGR_VALVE_DUTY_7E0_C3", "path": "Engine", "fmt": {"bix": 72, "len": 8, "max": 100, "div": 2.5497195309, "unit": "percent" }, "name": "Exhaust gas recirculation valve duty"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "C4"}, "freq": 1,
+  "signals": [
+    {"id": "RVR_BP_7E0_C4", "path": "Engine", "fmt": {"bix": 24, "len": 8, "max": 43.51, "mul": 0.170636, "unit": "psi" }, "name": "Boost pressure"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"21": "01"}, "freq": 1,
+  "signals": [
+    {"id": "RVR_PRIMARY_PRES_7E1_01", "path": "Transmission", "fmt": {"bix": 24, "len": 8, "max": 254, "min": -85.26, "mul": 1.332854, "add": -85.26, "unit": "psi" }, "name": "Primary pressure"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"21": "02"}, "freq": 0.25,
+  "signals": [
+    {"id": "RVR_INPUT_VSS",          "path": "Transmission", "fmt": {"bix": 8,  "len": 16, "max": 32767.5,             "div": 2,             "unit": "rpm"     }, "name": "Input speed"},
+    {"id": "RVR_OUTPUT_VSS",         "path": "Transmission", "fmt": {"bix": 24, "len": 16, "max": 32767.5,             "div": 2,             "unit": "rpm"     }, "name": "Output speed"},
+    {"id": "RVR_ATF_T",              "path": "Transmission", "fmt": {"bix": 40, "len": 8,  "max": 215,     "min": -40,           "add": -40, "unit": "celsius" }, "name": "Transmission fluid temperature", "suggestedMetric": "transmissionFluidTemperature"},
+    {"id": "RVR_SLIP_AT_VSS_7E1_02", "path": "Transmission", "fmt": {"bix": 64, "len": 8,  "max": 204,     "min": -51,           "add": -51, "unit": "rpm"     }, "name": "Slip speed"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "fcm1": true, "dbg": true, "cmd": {"21": "03"}, "freq": 0.25,
+  "signals": [
+    {"id": "RVR_CVT_PRIMARY_VSS",       "path": "Transmission", "fmt": {            "len": 8, "max": 8096,  "min": -64,    "mul": 32,                   "add": -64,                "unit": "rpm"          }, "name": "Primary pulley speed"},
+    {"id": "RVR_CVT_SECONDARY_VSS",     "path": "Transmission", "fmt": {"bix": 8,   "len": 8, "max": 16192, "min": -128,   "mul": 64,                   "add": -128,               "unit": "rpm"          }, "name": "Secondary pulley speed"},
+    {"id": "RVR_AT_SLEEP_REVOLUTION",   "path": "Transmission", "fmt": {"bix": 16,  "len": 8, "max": 127,   "min": -128,                                             "sign": true, "unit": "rpm"          }, "name": "Sleep revolution"},
+    {"id": "RVR_SLIP_AT_VSS",           "path": "Transmission", "fmt": {"bix": 24,  "len": 8, "max": 127,   "min": -128,                                             "sign": true, "unit": "rpm"          }, "name": "Slip speed"},
+    {"id": "RVR_CURRENT_GEAR_AT_RATIO", "path": "Transmission", "fmt": {"bix": 32,  "len": 8, "max": 2.55,                                  "div": 100,                            "unit": "scalar"       }, "name": "Current gear ratio"},
+    {"id": "RVR_AT_REAL_ENGINE_TORQUE", "path": "Transmission", "fmt": {"bix": 40,  "len": 8, "max": 812.8, "min": -819.2, "mul": 32,       "div": 5,                "sign": true, "unit": "newtonMeters" }, "name": "Real engine torque"},
+    {"id": "RVR_AT_INPUT_TORQUE",       "path": "Transmission", "fmt": {"bix": 56,  "len": 8, "max": 812.8, "min": -819.2, "mul": 32,       "div": 5,                "sign": true, "unit": "newtonMeters" }, "name": "Input torque"},
+    {"id": "RVR_AT_TORQUE_RATIO",       "path": "Transmission", "fmt": {"bix": 64,  "len": 8, "max": 3.98,                 "mul": 3.98,     "div": 255,                            "unit": "scalar"       }, "name": "Torque ratio"},
+    {"id": "RVR_AT_ATF_T",              "path": "Transmission", "fmt": {"bix": 72,  "len": 8, "max": 200,   "min": -55,                                 "add": -55,                "unit": "celsius"      }, "name": "Transmission fluid temperature",        "suggestedMetric": "transmissionFluidTemperature"},
+    {"id": "RVR_SECONDARY_PRES",        "path": "Transmission", "fmt": {"bix": 88,  "len": 8, "max": 924,                  "mul": 3.627392,                                        "unit": "psi"          }, "name": "Secondary pressure"},
+    {"id": "RVR_PRIMARY_PRES",          "path": "Transmission", "fmt": {"bix": 96,  "len": 8, "max": 924,                  "mul": 3.627392,                                        "unit": "psi"          }, "name": "Primary pressure"},
+    {"id": "RVR_CVT_T_RAW",             "path": "Transmission", "fmt": {"bix": 104, "len": 8, "max": 255,                                                                          "unit": "scalar"       }, "name": "Transmission temperature sensor count"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"21": "04"}, "freq": 0.25,
+  "signals": [
+    {"id": "RVR_AT_CUR_GEAR",          "path": "Transmission", "fmt": {           "len": 8, "max": 255,                          "unit": "scalar"  }, "name": "Current gear"},
+    {"id": "RVR_TARGET_GEAR_AT_RATIO", "path": "Transmission", "fmt": {"bix": 8,  "len": 8, "max": 2.55,             "div": 100, "unit": "scalar"  }, "name": "Target gear ratio"},
+    {"id": "RVR_AT_LINE_PRES",         "path": "Transmission", "fmt": {"bix": 24, "len": 8, "max": 6.3,  "mul": 6.3, "div": 255, "unit": "unknown" }, "name": "Line pressure"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "fcm1": true, "dbg": true, "cmd": {"21": "05"}, "freq": 1,
+  "signals": [
+    {"id": "RVR_CVT_LU_SOLENOID_OUTPUT_MA",         "path": "Transmission", "fmt": {            "len": 16, "max": 65535, "unit": "milliamps" }, "name": "Lock-up solenoid output current"},
+    {"id": "RVR_CVT_LU_SOLENOID_MONITOR_MA",        "path": "Transmission", "fmt": {"bix": 48,  "len": 16, "max": 65535, "unit": "milliamps" }, "name": "Lock-up solenoid monitor current"},
+    {"id": "RVR_CVT_LU_SEL_CHANGEOVER_SOL_OUTPUT",  "path": "Transmission", "fmt": {"bix": 107, "len": 1,  "max": 1,     "unit": "offon"     }, "name": "Lock-up/select changeover solenoid output"},
+    {"id": "RVR_CVT_LU_SEL_CHANGEOVER_SOL_MONITOR", "path": "Transmission", "fmt": {"bix": 115, "len": 1,  "max": 1,     "unit": "offon"     }, "name": "Lock-up/select changeover solenoid monitor"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "fcm1": true, "dbg": true, "cmd": {"21": "06"}, "freq": 0.25,
+  "signals": [
+    {"id": "RVR_CVT_SELECTOR_DS",        "path": "Transmission", "fmt": {"bix": 3,  "len": 1, "max": 1,                       "unit": "offon"  }, "name": "Sport mode selected"},
+    {"id": "RVR_CVT_SELECTOR_DS_7E1_06", "path": "Transmission", "fmt": {"bix": 12, "len": 1, "max": 1,                       "unit": "offon"  }, "name": "Paddle shift mode"},
+    {"id": "RVR_CVT_GEAR_AT_NUMBER",     "path": "Transmission", "fmt": {"bix": 16, "len": 8, "max": 256, "min": 1, "add": 1, "unit": "scalar" }, "name": "Gear number"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "fcm1": true, "dbg": true, "cmd": {"21": "07"}, "freq": 0.25,
+  "signals": [
+    {"id": "RVR_CVT_SELECTOR_D",       "path": "Transmission", "fmt": {           "len": 1, "max": 1, "unit": "offon" }, "name": "Drive selected"},
+    {"id": "RVR_CVT_SELECTOR_N",       "path": "Transmission", "fmt": {"bix": 1,  "len": 1, "max": 1, "unit": "offon" }, "name": "Neutral selected"},
+    {"id": "RVR_CVT_SELECTOR_R",       "path": "Transmission", "fmt": {"bix": 2,  "len": 1, "max": 1, "unit": "offon" }, "name": "Reverse selected"},
+    {"id": "RVR_CVT_SELECTOR_P",       "path": "Transmission", "fmt": {"bix": 3,  "len": 1, "max": 1, "unit": "offon" }, "name": "Park selected"},
+    {"id": "RVR_CVT_BRAKE",            "path": "Control",      "fmt": {"bix": 4,  "len": 1, "max": 1, "unit": "offon" }, "name": "Brake pedal"},
+    {"id": "RVR_CVT_SELECTOR_L",       "path": "Transmission", "fmt": {"bix": 5,  "len": 1, "max": 1, "unit": "offon" }, "name": "Low selected"},
+    {"id": "RVR_CVT_ACCELERATOR",      "path": "Transmission", "fmt": {"bix": 7,  "len": 1, "max": 1, "unit": "offon" }, "name": "Accelerator pedal"},
+    {"id": "RVR_CVT_ASC_ACTUATOR_SIG", "path": "Transmission", "fmt": {"bix": 17, "len": 1, "max": 1, "unit": "offon" }, "name": "Stability control actuator signal"},
+    {"id": "RVR_CVT_TCL_ACTUATOR_SIG", "path": "Transmission", "fmt": {"bix": 19, "len": 1, "max": 1, "unit": "offon" }, "name": "Traction control actuator signal"},
+    {"id": "RVR_CVT_ABS_ACTUATOR_SIG", "path": "Transmission", "fmt": {"bix": 23, "len": 1, "max": 1, "unit": "offon" }, "name": "Anti-lock brake actuator signal"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "fcm1": true, "dbg": true, "cmd": {"21": "10"}, "freq": 3600,
+  "signals": [
+    {"id": "RVR_CVT_TOTAL_TIME",           "path": "Transmission", "fmt": {"bix": 32,  "len": 16, "max": 10922.5, "div": 6, "unit": "unknown" }, "name": "Operating time"},
+    {"id": "RVR_CVT_OUT3_OIL_DEGRADATION", "path": "Transmission", "fmt": {"bix": 192, "len": 16, "max": 65535,             "unit": "scalar"  }, "name": "Fluid degradation, output 3"},
+    {"id": "RVR_CVT_OIL_DEGRADATION",      "path": "Transmission", "fmt": {"bix": 224, "len": 16, "max": 65535,             "unit": "scalar"  }, "name": "Fluid degradation",           "suggestedMetric": "cvtDeterioration"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"21": "33"}, "freq": 5,
+  "signals": [
+    {"id": "RVR_T_M_T", "path": "Transmission", "fmt": { "len": 8, "max": 205, "min": -50, "add": -50, "unit": "celsius" }, "name": "Transmission temperature", "suggestedMetric": "transmissionFluidTemperature"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"21": "A5"}, "freq": 5,
+  "signals": [
+    {"id": "RVR_CLUTCH_1_T", "path": "Transmission", "fmt": {           "len": 16, "max": 65485, "min": -50, "add": -50, "unit": "celsius" }, "name": "Clutch 1 temperature"},
+    {"id": "RVR_CLUTCH_2_T", "path": "Transmission", "fmt": {"bix": 16, "len": 16, "max": 65485, "min": -50, "add": -50, "unit": "celsius" }, "name": "Clutch 2 temperature"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"21": "A6"}, "freq": 0.25,
+  "signals": [
+    {"id": "RVR_CLUTCH_1_SLIP_AT_VSS", "path": "Transmission", "fmt": { "len": 16, "max": 65535, "unit": "rpm" }, "name": "Clutch 1 slip speed"}
+  ]}
 ]
 }
