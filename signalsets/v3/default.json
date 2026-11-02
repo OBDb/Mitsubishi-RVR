@@ -80,7 +80,7 @@
     {"id": "RVR_AC_FAN_M1_WORK_TIME", "path": "Climate", "fmt": {"bix": 40, "len": 24, "max": 83886075, "mul": 5, "unit": "scalar" }, "name": "Fan M1 work time"},
     {"id": "RVR_AC_FAN_M2_WORK_TIME", "path": "Climate", "fmt": {"bix": 64, "len": 24, "max": 83886075, "mul": 5, "unit": "scalar" }, "name": "Fan M2 work time"}
   ]},
-{ "hdr": "6A0", "rax": "514", "fcm1": true, "dbg": true, "cmd": {"21": "A3"}, "freq": 30,
+{ "hdr": "6A0", "rax": "514", "fcm1": true, "dbg": true, "cmd": {"21": "A3"}, "freq": 1,
   "signals": [
     {"id": "RVR_FLI", "path": "Fuel", "fmt": {"bix": 16, "len": 8, "max": 100, "add": -16, "unit": "percent" }, "name": "Fuel level", "suggestedMetric": "fuelTankLevel"}
   ]},
