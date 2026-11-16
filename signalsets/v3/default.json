@@ -117,13 +117,13 @@
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "02"}, "freq": 1,
   "signals": [
-    {"id": "RVR_MPI_IAT", "path": "Engine", "fmt": {           "len": 8, "max": 120,   "min": -40,                 "add": -40, "unit": "celsius" }, "name": "Intake air temperature"},
+    {"id": "RVR_MPI_IAT", "path": "Engine", "fmt": {           "len": 8, "max": 120,   "min": -40,                 "add": -40, "unit": "celsius" }, "name": "Intake air temperature",     "suggestedMetric": "intakeAirTemperature"},
     {"id": "RVR_MPI_ECT", "path": "Engine", "fmt": {"bix": 8,  "len": 8, "max": 215,   "min": -40,                 "add": -40, "unit": "celsius" }, "name": "Engine coolant temperature", "suggestedMetric": "engineCoolantTemperature"},
     {"id": "RVR_BP",      "path": "Engine", "fmt": {"bix": 16, "len": 8, "max": 49.17,             "mul": 0.19285,             "unit": "psi"     }, "name": "Boost pressure"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "03"}, "freq": 1,
   "signals": [
-    {"id": "RVR_MPI_MANIFOLD_PRES",  "path": "Engine", "fmt": {           "len": 16, "max": 126,             "div": 512, "unit": "kilopascal" }, "name": "Manifold pressure"},
+    {"id": "RVR_MPI_MANIFOLD_PRES",  "path": "Engine", "fmt": {           "len": 16, "max": 126,             "div": 512, "unit": "kilopascal" }, "name": "Manifold pressure",       "suggestedMetric": "absoluteBoostPressure"},
     {"id": "RVR_MPI_AIR_FLOW_SNS_V", "path": "Engine", "fmt": {"bix": 16, "len": 8,  "max": 5,   "mul": 5,   "div": 255, "unit": "volts"      }, "name": "Air flow sensor voltage"},
     {"id": "RVR_MPI_ENGINE_LOAD",    "path": "Engine", "fmt": {"bix": 32, "len": 8,  "max": 100, "mul": 100, "div": 255, "unit": "percent"    }, "name": "Engine load",             "suggestedMetric": "engineLoad"}
   ]},
